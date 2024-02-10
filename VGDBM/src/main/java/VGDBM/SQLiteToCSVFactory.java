@@ -28,13 +28,13 @@ class SQLiteToCSVFactory {
 
         try {
             ResultSet rs = db.fetchAllByDate();
+            writer.print("Game,Score,Year,Note\n");
             while (rs.next()) {
                 String game = rs.getString("Game");
                 String score = rs.getString("Score");
                 String year = rs.getString("Year");
                 String note = rs.getString("Note");
                 writer.print(game + "," + score + "," + year + "," + note + "\n");
-                System.out.println(game + "," + score + "," + year + "," + note);
             }
         }
 
