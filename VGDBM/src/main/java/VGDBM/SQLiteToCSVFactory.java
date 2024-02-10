@@ -13,7 +13,12 @@ import java.sql.SQLException;
 
 class SQLiteToCSVFactory {
 
-    static DatabaseManager db;
+    private DatabaseManager db;
+
+    SQLiteToCSVFactory(DatabaseManager db) {
+        this.db = db;
+    }
+
 
     /**
      * Reads an SQLite database and writes the data to a CSV file.
@@ -44,23 +49,5 @@ class SQLiteToCSVFactory {
 
         writer.close();
         
-    }
-
-
-
-    public static void main(String[] args) {
-
-        db = new DatabaseManager();
-        String CSVAddress = "." + "\\games.csv";
-
-        try {
-            db.open(".", "games.sqlite");
-            SQLiteToCSVFactory factory = new SQLiteToCSVFactory();
-            factory.writeCSV(CSVAddress);
-        }
-
-        catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
     }
 }
