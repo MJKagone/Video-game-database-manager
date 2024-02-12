@@ -10,13 +10,13 @@ class Game {
     private String game;
     private String score;
     private String year;
-    private String note;
+    private String notes;
 
-    public Game(String game, String score, String year, String note) {
+    public Game(String game, String score, String year, String notes) {
         this.game = game;
         this.score = score;
         this.year = year;
-        this.note = note;
+        this.notes = notes;
     }
 
     public String getGame() {
@@ -31,7 +31,7 @@ class Game {
         return year;
     }
 
-    public String getNote() {
-        return note;
+    public String getNotes() {
+        return notes;
     }
 }

@@ -34,8 +34,8 @@ class CSVToSQLiteFactory {
             String game = parts[0];
             String score = parts[1];
             String year = parts[2];
-            String note = parts[3];
-            Game newGame = new Game(game, score, year, note);
+            String notes = parts[3];
+            Game newGame = new Game(game, score, year, notes);
             try {
                 db.insertGame(newGame);
             }

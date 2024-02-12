@@ -33,13 +33,13 @@ class SQLiteToCSVFactory {
 
         try {
             ResultSet rs = db.fetchAllByDate();
-            writer.print("Game,Score,Year,Note\n");
+            writer.print("Game,Score,Year,Notes\n");
             while (rs.next()) {
                 String game = rs.getString("Game");
                 String score = rs.getString("Score");
                 String year = rs.getString("Year");
-                String note = rs.getString("Note");
-                writer.print(game + "," + score + "," + year + "," + note + "\n");
+                String notes = rs.getString("Notes");
+                writer.print(game + "," + score + "," + year + "," + notes + "\n");
             }
         }
 

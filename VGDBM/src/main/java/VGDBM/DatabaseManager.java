@@ -53,7 +53,7 @@ class DatabaseManager {
      */
     public void initialize(Connection conn) throws SQLException {
 
-            PreparedStatement stmt = conn.prepareStatement("CREATE TABLE IF NOT EXISTS Games (Game TEXT PRIMARY KEY, Score INTEGER, Year INTEGER, Note TEXT);");
+            PreparedStatement stmt = conn.prepareStatement("CREATE TABLE IF NOT EXISTS Games (Game TEXT PRIMARY KEY, Score INTEGER, Year INTEGER, Notes TEXT);");
             stmt.executeUpdate();
             stmt.close();
             System.out.println("Table Games created"); 
@@ -87,7 +87,7 @@ class DatabaseManager {
             yearInt = Integer.parseInt(game.getYear());
         }
 
-        PreparedStatement stmt = conn.prepareStatement("INSERT INTO Games (Game, Score, Year, Note) VALUES (?, ?, ?, ?);");
+        PreparedStatement stmt = conn.prepareStatement("INSERT INTO Games (Game, Score, Year, Notes) VALUES (?, ?, ?, ?);");
         stmt.setString(1, game.getGame());
 
         if (scoreInt != null) {
@@ -106,7 +106,7 @@ class DatabaseManager {
             stmt.setNull(3, java.sql.Types.INTEGER);
         }
 
-        stmt.setString(4, game.getNote());
+        stmt.setString(4, game.getNotes());
         stmt.executeUpdate();
         stmt.close();
         System.out.println(game.getGame() + " added to database");
@@ -142,7 +142,7 @@ class DatabaseManager {
             yearInt = Integer.parseInt(updatedGame.getYear());
         }
 
-        PreparedStatement stmt = conn.prepareStatement("UPDATE Games SET Game = ?, Score = ?, Year = ?, Note = ? WHERE Game = ?;");
+        PreparedStatement stmt = conn.prepareStatement("UPDATE Games SET Game = ?, Score = ?, Year = ?, Notes = ? WHERE Game = ?;");
         stmt.setString(1, updatedGame.getGame());
 
         if (scoreInt != null) {
@@ -161,7 +161,7 @@ class DatabaseManager {
             stmt.setNull(3, java.sql.Types.INTEGER);
         }
 
-        stmt.setString(4, updatedGame.getNote());
+        stmt.setString(4, updatedGame.getNotes());
         stmt.setString(5, game);
         stmt.executeUpdate();
         stmt.close();
@@ -177,6 +177,9 @@ class DatabaseManager {
      */
     public void removeGame(String game) throws SQLException {
 
+        if (!gameExists(game)) {
+            throw new IllegalArgumentException("'" + game + "' not in database");
+        }
         PreparedStatement stmt = conn.prepareStatement("DELETE FROM Games WHERE Game = ?;");
         stmt.setString(1, game);
         stmt.executeUpdate();
@@ -218,7 +221,7 @@ class DatabaseManager {
         Game fetchedGame = null;
 
         if (rs.next()) {
-            fetchedGame = new Game(rs.getString("Game"), rs.getString("Score"), rs.getString("Year"), rs.getString("note"));
+            fetchedGame = new Game(rs.getString("Game"), rs.getString("Score"), rs.getString("Year"), rs.getString("Notes"));
         }
 
         stmt.close();

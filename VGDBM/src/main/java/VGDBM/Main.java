@@ -7,7 +7,7 @@ package VGDBM;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class App { 
+public class Main { 
 
     public static void main(String[] args) {
         
@@ -41,33 +41,37 @@ public class App {
 
                 case 1:
 
-                    System.out.println("Enter information in the format \"Game,Score,Year,Note\"");
-                    String input = scanner.nextLine();
-                    
                     try {
-                        String[] parts = input.split(",");
-                        if (parts.length != 4) {
-                            System.out.println("Invalid input. Please enter information in the correct format.");
-                            break;
+
+                        System.out.println("Enter the name of the game");
+                        String game = scanner.nextLine();
+
+                        if (db.gameExists(game)) {
+                            System.out.println("Game already in database");
                         }
-                        String name = parts[0];
-                        String score = parts[1];
-                        String year = parts[2];
-                        String note = parts[3];
-                        Game game = new Game(name, score, year, note);
-                        db.insertGame(game);
+
+                        else {
+                            System.out.println("Enter the score");
+                            String score = scanner.nextLine();
+    
+                            System.out.println("Enter the year");
+                            String year = scanner.nextLine();
+    
+                            System.out.println("Enter the notes");
+                            String newnotes = scanner.nextLine();
+                        
+                            db.insertGame(new Game(game, score, year, newnotes));
+                        }
+
                         break;
+
                     }
 
-                    catch (IllegalArgumentException e) {
+                    catch (Exception e) {
                         System.out.println("Invalid input. Please enter information in the correct format.");
                         break;
                     }
 
-                    catch (SQLException e) {
-                        System.out.println("SQLException");
-                        break;
-                    }
 
                 case 2:
 
@@ -78,7 +82,6 @@ public class App {
                         if (!db.gameExists(gameName)) {
                             System.out.println("Game not found");
                             System.out.println(db.fetchGame(gameName).getGame());
-                            break;
                         }
                     
                         System.out.println("Enter the new name. Press enter to leave unchanged.");
@@ -107,20 +110,22 @@ public class App {
                             newYear = oldYear;
                         }
                     
-                        System.out.println("Enter the new note. Press enter to leave unchanged.");
-                        String newnote = scanner.nextLine();
-                        if (newnote.trim().equals("")) {
-                            newnote = db.fetchGame(gameName).getNote();
+                        System.out.println("Enter the new notes. Press enter to leave unchanged.");
+                        String newnotes = scanner.nextLine();
+                        if (newnotes.trim().equals("")) {
+                            newnotes = db.fetchGame(gameName).getNotes();
                         }
                     
-                        db.updateGame(gameName, new Game(newGame, newScore, newYear, newnote));
+                        db.updateGame(gameName, new Game(newGame, newScore, newYear, newnotes));
                         break;
 
                     } 
 
                     catch (Exception e) {
                         System.out.println("Invalid input. Please enter information in the correct format.");
+                        break;
                     }
+
 
                 case 3:
 
@@ -128,10 +133,13 @@ public class App {
                     String gameToRemove = scanner.next();
                     try {
                         db.removeGame(gameToRemove);
-                    } catch (Exception e) {
+                        break;
+                    } 
+                    catch (Exception e) {
                         System.out.println(e.getMessage());
+                        break;
                     }
-                    break;
+
 
                 case 4:
                     
@@ -139,20 +147,23 @@ public class App {
                         SQLiteToCSVFactory factory = new SQLiteToCSVFactory(db);
                         factory.writeCSV(address + "games.csv");
                         System.out.println("Database exported to games.csv");
+                        break;
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
+                        break;
                     }
-                    break;
+
 
                 case 5:
 
                     try {
                         db.close();
+                        System.out.println("Database closed.");
+                        System.exit(0);
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
+                        System.exit(0);
                     }
-                    System.out.println("Database closed.");
-                    System.exit(0);
 
                 default:
 
