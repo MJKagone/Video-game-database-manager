@@ -36,11 +36,13 @@ class CSVToSQLiteFactory {
             String year = parts[2];
             String notes = parts[3];
             Game newGame = new Game(game, score, year, notes);
-            try {
-                db.insertGame(newGame);
-            }
-            catch (SQLException e) {
-                System.out.println("SQLException");
+            if (!newGame.getGame().equals("Game")) {
+                try {
+                    db.insertGame(newGame);
+                }
+                catch (SQLException e) {
+                    System.out.println("SQLException");
+                }
             }
         }
         scanner.close();

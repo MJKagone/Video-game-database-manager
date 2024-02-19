@@ -33,13 +33,13 @@ class DatabaseManager {
         exists = file.exists();
 
         if (!exists) {
-            System.out.println("Creating games.sqlite");
+            System.out.println("Creating " + name);
             conn = DriverManager.getConnection("jdbc:sqlite:" + address + "\\" + name);
             initialize(conn);
         }
 
         else {
-            System.out.println("Opening games.sqlite");
+            System.out.println("Opening " + name);
             conn = DriverManager.getConnection("jdbc:sqlite:" + address + "\\" + name);
         }
 
@@ -109,7 +109,7 @@ class DatabaseManager {
         stmt.setString(4, game.getNotes());
         stmt.executeUpdate();
         stmt.close();
-        System.out.println(game.getGame() + " added to database");
+        System.out.println("'" + game.getGame() + "' added to database");
 
     }
 
@@ -165,7 +165,7 @@ class DatabaseManager {
         stmt.setString(5, game);
         stmt.executeUpdate();
         stmt.close();
-        System.out.println(game + " updated in database");
+        System.out.println("'" + game + "' updated in database");
 
     }
 
@@ -184,7 +184,7 @@ class DatabaseManager {
         stmt.setString(1, game);
         stmt.executeUpdate();
         stmt.close();
-        System.out.println(game + " removed from database");
+        System.out.println("'" + game + "' removed from database");
 
     }
 
