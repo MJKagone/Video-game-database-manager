@@ -56,11 +56,14 @@ public class Main {
     
                             System.out.println("Enter the year");
                             String year = scanner.nextLine();
+
+                            System.out.println("Enter the platform");
+                            String platform = scanner.nextLine();
     
                             System.out.println("Enter the notes");
                             String newnotes = scanner.nextLine();
                         
-                            db.insertGame(new Game(game, score, year, newnotes));
+                            db.insertGame(new Game(game, score, year, platform, newnotes));
                         }
 
                         break;
@@ -109,14 +112,21 @@ public class Main {
                         else if (newYear.trim().equals("")) {
                             newYear = oldYear;
                         }
-                    
-                        System.out.println("Enter the new notes. Press enter to leave unchanged.");
-                        String newnotes = scanner.nextLine();
-                        if (newnotes.trim().equals("")) {
-                            newnotes = db.fetchGame(gameName).getNotes();
+
+                        System.out.println("Enter the new platform. Press enter to leave unchanged.");
+                        String oldPlatform = db.fetchGame(gameName).getPlatform();
+                        String newPlatform = scanner.nextLine();
+                        if (newPlatform.trim().equals("")) {
+                            newPlatform = oldPlatform;
                         }
                     
-                        db.updateGame(gameName, new Game(newGame, newScore, newYear, newnotes));
+                        System.out.println("Enter the new notes. Press enter to leave unchanged.");
+                        String newNotes = scanner.nextLine();
+                        if (newNotes.trim().equals("")) {
+                            newNotes = db.fetchGame(gameName).getNotes();
+                        }
+                    
+                        db.updateGame(gameName, new Game(newGame, newScore, newYear, newPlatform, newNotes));
                         break;
 
                     } 
