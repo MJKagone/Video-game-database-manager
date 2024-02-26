@@ -32,14 +32,35 @@ class SQLiteToCSVFactory {
         PrintWriter writer = new PrintWriter(file);
 
         try {
+
+            String game;
+            String score;
+            String year;
+            String platform;
+            String notes;
             ResultSet rs = db.fetchAllByDate();
             writer.print("Game,Score,Year,Platform,Notes\n");
+
             while (rs.next()) {
-                String game = rs.getString("Game");
-                String score = rs.getString("Score");
-                String year = rs.getString("Year");
-                String platform = rs.getString("Platform");
-                String notes = rs.getString("Notes");
+                
+                game = rs.getString("Game");
+
+                if (rs.getString("Score") == null) {
+                    score = "-";
+                } 
+                else {
+                    score = rs.getString("Score");
+                }
+
+                if (rs.getString("Year") == null) {
+                    year = "-";
+                } 
+                else {
+                    year = rs.getString("Year");
+                }
+                
+                platform = rs.getString("Platform");
+                notes = rs.getString("Notes");
                 writer.print(game + "," + score + "," + year + "," + platform + "," + notes + "\n");
             }
         }

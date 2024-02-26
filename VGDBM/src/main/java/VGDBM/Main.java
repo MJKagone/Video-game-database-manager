@@ -13,7 +13,7 @@ public class Main {
         
         DatabaseManager db = new DatabaseManager();
         String address = "." + "\\";
-        String fileName = "games.sqlite";
+        String fileName = "games.db";
 
         try {
             db.open(address, fileName);

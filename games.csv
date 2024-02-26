@@ -1,4 +1,6 @@
 Game,Score,Year,Platform,Notes
+The Sims 4,3,2024,PC,-
+Flower,2,2024,PS4,-
 Ni no Kuni II: Revenant Kingdom,3,2024,PS4,-
 Dragon Quest VIII: Journey of the Cursed King,3,2024,3DS,-
 The Legend of Zelda: Majora's Mask,3,2023,3DS,watched
@@ -26,11 +28,13 @@ Pokemon Omega Ruby / Alpha Sapphire,4,2020,3DS,-
 Ghost of Tsushima,5,2020,PS5,-
 Danganronpa 2: Goodbye Despair,4,2020,PC,-
 Danganronpa: Trigger Happy Havoc,4,2020,PC,-
+51 Worldwide Games,3,2020,Switch,-
 Super Smash Bros. Ultimate,3,2020,Switch,-
 Persona Q: Shadow of the Labyrinth,3,2020,3DS,-
 Trails from Zero,4,2020,PC,-
 Mario Kart 8 Deluxe,3,2020,Switch,-
 Stardew Valley,4,2020,Switch,-
+Dr Kawashima's Brain Training,1,2020,Switch,-
 Assassins Creed: Unity,2,2020,PS4,-
 Undertale,5,2020,Switch,-
 The Legend of Zelda: Ocarina of Time,3,2019,3DS,-
@@ -47,7 +51,7 @@ Kingdom Hearts III,4,2019,PS4,-
 Persona 4 Golden,5,2018,Vita,-
 Final Fantasy III,2,2018,PC,-
 Trails of Cold Steel,5,2018,PS4,-
-Granblue Fantasy,null,2018,Mobile,impossible to score
+Granblue Fantasy,-,2018,Mobile,impossible to score
 Persona 3 FES,4,2018,PS3,-
 Phoenix Wright: Ace Attorney - Spirit of Justice,4,2018,Mobile,-
 Grim Fandango,3,2018,PS4,-
@@ -76,6 +80,7 @@ Final Fantasy XIV: Heavensward,4,2017,PS4,-
 Final Fantasy XIV: A Realm Reborn,3,2017,PS4,-
 Journey,3,2017,PS4,-
 Rise of the Tomb Raider,3,2017,PS4,-
+The Sims 3,3,2017,PC,-
 Final Fantasy X,3,2017,PS4,-
 Final Fantasy IV,3,2017,PC,-
 Lightning Returns: Final Fantasy XIII,2,2017,PS3,-
@@ -124,8 +129,8 @@ The Elder Scrolls IV: Oblivion,3,2012,PS3,-
 The Elder Scrolls V: Skyrim,5,2011,PS3,-
 Kingdom Hearts II,5,2011,PS3,-
 Ratchet & Clank: A Crack in Time,3,2011,PS3,-
-Pokemon Gold/Silver,null,2011,GB,no memory of this
-Pokemon Red/Blue,null,2011,GB,no memory of this
+Pokemon Gold/Silver,-,2011,GB,no memory of this
+Pokemon Red/Blue,-,2011,GB,no memory of this
 Phoenix Wright: Ace Attorney - Trials and Tribulations,5,2011,DS,-
 Phoenix Wright: Ace Attorney - Justice for All,5,2011,DS,-
 Phoenix Wright: Ace Attorney,4,2011,DS,watched
@@ -133,35 +138,46 @@ Pokemon Black/White,4,2010,DS,-
 Naruto Shippuden: Ultimate Ninja Storm 2,4,2010,PS3,-
 Final Fantasy VII,5,2010,PS3,-
 Minecraft,3,2010,PC,-
-Star Wars: Battlefront II (PS2),4,null,PS2,-
-Naruto: Ultimate Ninja Storm,3,null,PS3,-
-Naruto Ultimate Ninja 3,2,null,PS2,-
-Ratchet & Clank: Tools of Destruction,3,null,PS3,-
-Ratchet & Clank: Size Matters,2,null,PS2,-
-Pokemon Diamond/Pearl,3,null,DS,-
-Agent Hugo,1,null,PS2,-
-Digimon Rumble Arena 2,3,null,PS2,-
-Rayman 3: Hoodlum Havoc,null,null,PS2,no memory of this
-Spyro 2: Ripto's Revenge,null,null,PS1,no memory of this
-One Piece: Grand Adventure,3,null,PS2,-
-Dragon Ball Z: Budokai Tenkaichi 3,4,null,PS2,-
-Dragon Ball Z: Budokai Tenkaichi 2,4,null,PS2,-
-Dragon Ball Z: Budokai Tenkaichi,1,null,PS2,-
-Jak X,1,null,PS2,-
-Jak 3,4,null,PS2,-
-Ape Escape 3,5,null,PS2,-
-Ratchet: Gladiator,2,null,PS2,-
-Worms Forts: Under Siege,3,null,PS2,-
-Super Dragon Ball Z,2,null,PS2,-
-Sly 3: Honor Among Thieves,4,null,PS2,-
-Sly 2: Band of Thieves,4,null,PS2,-
-Sonic Heroes,3,null,PS2,-
-Ape Escape 2,4,null,PS2,-
-Ratchet & Clank 3: Up Your Arsenal,4,null,PS2,-
-Jak II: Renegade,3,null,PS2,-
-RuneScape,4,null,PC,-
-Beyond Good & Evil,4,null,PS2,-
-Ratchet & Clank 2: Going Commando,3,null,PS2,-
-Pokemon Sapphire/Ruby/Emerald,4,null,GBA,-
-Ratchet & Clank,2,null,PS2,-
-Ape Escape,3,null,PS1,-
+Star Wars: Battlefront II (PS2),4,-,PS2,-
+Naruto: Ultimate Ninja Storm,3,-,PS3,-
+Naruto Ultimate Ninja 3,2,-,PS2,-
+Ratchet & Clank: Tools of Destruction,3,-,PS3,-
+Ratchet & Clank: Size Matters,2,-,PS2,-
+Spider-Man: Web of Shadows,1,-,PS2,more like web of lies
+Pokemon Diamond/Pearl,3,-,DS,-
+Agent Hugo,1,-,PS2,-
+Digimon Rumble Arena 2,3,-,PS2,-
+Rayman 3: Hoodlum Havoc,-,-,PS2,no memory of this
+Spyro 2: Ripto's Revenge,-,-,PS1,no memory of this
+One Piece: Grand Adventure,3,-,PS2,-
+Lego Star Wars: The Complete Saga,3,-,PS3,-
+Dragon Ball Z: Budokai Tenkaichi 3,4,-,PS2,-
+Dragon Ball Z: Budokai Tenkaichi 2,4,-,PS2,-
+Dragon Ball Z: Budokai Tenkaichi,1,-,PS2,-
+The Sims 2,3,-,PC,-
+The Sims,2,-,PS2,-
+Jak X,1,-,PS2,-
+Jak 3,4,-,PS2,-
+Ape Escape 3,5,-,PS2,-
+Ratchet: Gladiator,2,-,PS2,-
+Worms Forts: Under Siege,3,-,PS2,-
+Hugo Bukkazoom!,2,-,PS2,-
+Super Dragon Ball Z,2,-,PS2,-
+Sly 3: Honor Among Thieves,4,-,PS2,-
+Sly 2: Band of Thieves,4,-,PS2,-
+Donald Duck PK,1,-,PS2,-
+Sonic Heroes,3,-,PS2,-
+Ultimate Spider-Man,2,-,PS2,-
+Crash Team Racing,2,-,PS1,-
+Ape Escape 2,4,-,PS2,-
+Ratchet & Clank 3: Up Your Arsenal,4,-,PS2,-
+Jak II: Renegade,3,-,PS2,-
+Duel Masters: Kaijudo Showdown,2,-,GBA,-
+Pokemon Sapphire/Ruby/Emerald,4,-,GBA,-
+RuneScape,4,-,PC,-
+Ratchet & Clank 2: Going Commando,3,-,PS2,-
+Beyond Good & Evil,4,-,PS2,-
+Hugo: The Evil Mirror,2,-,PS1,-
+Ratchet & Clank,2,-,PS2,-
+Rayman,2,-,PS1,-
+Ape Escape,3,-,PS1,-
