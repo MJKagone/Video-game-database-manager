@@ -1,9 +1,4 @@
-/*  
- * CSVToSqliteFactory.java
- * Reads in an SQLite database and creates a new CSV file with the same data sorted by date.
- */
-
- package VGDBM;
+package VGDBM;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,6 +6,10 @@ import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * CSVToSqliteFactory.java
+ * Reads in an SQLite database and creates a new CSV file with the same data sorted by date.
+ */
 class SQLiteToCSVFactory {
 
     private DatabaseManager db;
@@ -18,7 +17,6 @@ class SQLiteToCSVFactory {
     SQLiteToCSVFactory(DatabaseManager db) {
         this.db = db;
     }
-
 
     /**
      * Reads an SQLite database and writes the data to a CSV file.

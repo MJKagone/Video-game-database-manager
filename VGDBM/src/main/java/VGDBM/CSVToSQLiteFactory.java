@@ -1,9 +1,3 @@
-
-/*  
- * CSVToSqliteFactory.java
- * Reads in a CSV file and creates a new SQLite database with the same data.
- */
-
 package VGDBM;
 
 import java.io.File;
@@ -14,7 +8,10 @@ import java.util.ListIterator;
 import java.util.Scanner;
 import java.sql.SQLException;
 
-
+/*  
+ * CSVToSqliteFactory.java
+ * Reads in a CSV file and creates a new SQLite database with the same data.
+ */
 class CSVToSQLiteFactory {
 
     /**

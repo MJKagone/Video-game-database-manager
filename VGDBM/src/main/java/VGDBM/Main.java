@@ -1,12 +1,12 @@
+package VGDBM;
+
+import java.util.Scanner;
+
 /**
 * The main class that represents the application.
 * This class contains the main method that serves as the entry point for the application.
 * Provides a command-line interface for managing a game database (with some bugs...).
 */
-package VGDBM;
-import java.sql.SQLException;
-import java.util.Scanner;
-
 public class Main { 
 
     public static void main(String[] args) {

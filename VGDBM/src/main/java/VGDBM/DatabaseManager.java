@@ -1,10 +1,5 @@
-/**
- * The DatabaseManager class is responsible for managing the game database.
- * It provides methods for opening, initializing, inserting, updating, removing,
- * and querying games in the database.
- */
+package VGDBM;
 
- package VGDBM;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,6 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.io.File;
 
+/**
+ * The DatabaseManager class is responsible for managing the game database.
+ * It provides methods for opening, initializing, inserting, updating, removing,
+ * and querying games in the database.
+ */
 class DatabaseManager {
 
     private Connection conn;

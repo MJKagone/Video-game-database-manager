@@ -1,10 +1,8 @@
+package VGDBM;
 
 /**
  * Represents a game in the game database.
  */
-
- package VGDBM;
-
 class Game {
 
     private String game;
