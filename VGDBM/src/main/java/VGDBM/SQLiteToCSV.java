@@ -10,11 +10,11 @@ import java.sql.SQLException;
  * CSVToSqliteFactory.java
  * Reads in an SQLite database and creates a new CSV file with the same data sorted by date.
  */
-class SQLiteToCSVFactory {
+class SQLiteToCSV {
 
     private DatabaseManager db;
 
-    SQLiteToCSVFactory(DatabaseManager db) {
+    SQLiteToCSV(DatabaseManager db) {
         this.db = db;
     }
 

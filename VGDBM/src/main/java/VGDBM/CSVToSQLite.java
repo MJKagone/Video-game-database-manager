@@ -12,7 +12,7 @@ import java.sql.SQLException;
  * CSVToSqliteFactory.java
  * Reads in a CSV file and creates a new SQLite database with the same data.
  */
-class CSVToSQLiteFactory {
+class CSVToSQLite {
 
     /**
      * Reads a CSV file and inserts the data into a SQLite database.
@@ -92,7 +92,7 @@ class CSVToSQLiteFactory {
         try {
             db.open(".", "games.db");
             db.clearDatabase();
-            CSVToSQLiteFactory factory = new CSVToSQLiteFactory();
+            CSVToSQLite factory = new CSVToSQLite();
             if (choice.equals("y")) {
                 factory.readCSVInverted(CSVAddress, db);
             }

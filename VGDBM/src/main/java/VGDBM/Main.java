@@ -154,7 +154,7 @@ public class Main {
                 case 4:
                     
                     try {
-                        SQLiteToCSVFactory factory = new SQLiteToCSVFactory(db);
+                        SQLiteToCSV factory = new SQLiteToCSV(db);
                         factory.writeCSV(address + "games.csv");
                         System.out.println("Database exported to games.csv");
                         break;
