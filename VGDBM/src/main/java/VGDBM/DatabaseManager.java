@@ -53,7 +53,7 @@ class DatabaseManager {
      */
     public void initialize(Connection conn) throws SQLException {
 
-            PreparedStatement stmt = conn.prepareStatement("CREATE TABLE IF NOT EXISTS Games (Game TEXT PRIMARY KEY, Score INTEGER, Year INTEGER, Platform TEXT, Notes TEXT);");
+            PreparedStatement stmt = conn.prepareStatement("CREATE TABLE IF NOT EXISTS Games (Game TEXT PRIMARY KEY, Score DOUBLE, Year INTEGER, Platform TEXT, Notes TEXT);");
             stmt.executeUpdate();
             stmt.close();
             System.out.println("Table Games created"); 
@@ -68,15 +68,15 @@ class DatabaseManager {
      */
     public void insertGame(Game game) throws SQLException {
 
-        Integer scoreInt;
+        Double scoreDouble;
         Integer yearInt;
 
         if (game.getScore().equals("-")) {
-            scoreInt = null;
+            scoreDouble = null;
         }
 
         else {
-            scoreInt = Integer.parseInt(game.getScore());
+            scoreDouble = Double.parseDouble(game.getScore().replace("+", ".5"));
         }
 
         if (game.getYear().equals("-")) {
@@ -90,12 +90,12 @@ class DatabaseManager {
         PreparedStatement stmt = conn.prepareStatement("INSERT INTO Games (Game, Score, Year, Platform, Notes) VALUES (?, ?, ?, ?, ?);");
         stmt.setString(1, game.getGame());
 
-        if (scoreInt != null) {
-            stmt.setInt(2, scoreInt);
+        if (scoreDouble != null) {
+            stmt.setDouble(2, scoreDouble);
         }
 
         else {
-            stmt.setNull(2, java.sql.Types.INTEGER);
+            stmt.setNull(2, java.sql.Types.DOUBLE);
         }
 
         if (yearInt != null) {
@@ -124,15 +124,15 @@ class DatabaseManager {
      */
     public void updateGame(String game, Game updatedGame) throws SQLException {
 
-        Integer scoreInt;
+        Double scoreDouble;
         Integer yearInt;
 
         if (updatedGame.getScore().equals("-")) {
-            scoreInt = null;
+            scoreDouble = null;
         }
 
         else {
-            scoreInt = Integer.parseInt(updatedGame.getScore());
+            scoreDouble = Double.parseDouble(updatedGame.getScore().replace("+", ".5"));
         }
 
         if (updatedGame.getYear().equals("-")) {
@@ -146,12 +146,12 @@ class DatabaseManager {
         PreparedStatement stmt = conn.prepareStatement("UPDATE Games SET Game = ?, Score = ?, Year = ?, Platform = ?, Notes = ? WHERE Game = ?;");
         stmt.setString(1, updatedGame.getGame());
 
-        if (scoreInt != null) {
-            stmt.setInt(2, scoreInt);
+        if (scoreDouble != null) {
+            stmt.setDouble(2, scoreDouble);
         }
 
         else {
-            stmt.setNull(2, java.sql.Types.INTEGER);
+            stmt.setNull(2, java.sql.Types.DOUBLE);
         }
 
         if (yearInt != null) {

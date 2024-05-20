@@ -62,7 +62,7 @@ public class DatabaseManagerTest {
             Game insertedGame6 = db.fetchGame("Testgame6");
             Game insertedGame7 = db.fetchGame("Testgame7");
             assertTrue(insertedGame4.getGame().equals("Testgame4"));
-            assertTrue(insertedGame4.getScore().equals("5"));
+            assertTrue(insertedGame4.getScore().equals("5.0"));
             assertTrue(insertedGame4.getYear().equals("2020"));
             assertTrue(insertedGame4.getPlatform().equals("TestPlatform"));
             assertTrue(insertedGame4.getNotes().equals("Testnotes4"));
@@ -72,7 +72,7 @@ public class DatabaseManagerTest {
             assertTrue(insertedGame5.getPlatform().equals("PS5"));
             assertTrue(insertedGame5.getNotes().equals("Testnotes5"));
             assertTrue(insertedGame6.getGame().equals("Testgame6"));
-            assertTrue(insertedGame6.getScore().equals("5"));
+            assertTrue(insertedGame6.getScore().equals("5.0"));
             assertTrue(insertedGame6.getYear() == null);
             assertTrue(insertedGame6.getPlatform().equals("TestPlatform"));
             assertTrue(insertedGame6.getNotes().equals("Testnotes6"));
@@ -98,7 +98,7 @@ public class DatabaseManagerTest {
             assertTrue(db.gameExists("Updategame"));
             Game insertedGame = db.fetchGame("Updategame");
             assertTrue(insertedGame.getGame().equals("Updategame"));
-            assertTrue(insertedGame.getScore().equals("0"));
+            assertTrue(insertedGame.getScore().equals("0.0"));
             assertTrue(insertedGame.getYear().equals("2021"));
             assertTrue(insertedGame.getNotes().equals("Testnotes2"));
         } catch (Exception e) {

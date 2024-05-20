@@ -1,12 +1,12 @@
 Game,Score,Year,Platform,Notes
-Life is Strange 2,3,2024,PS4,-
+Life is Strange 2,3+,2024,PS4,-
+13 Sentinels: Aegis Rim,4+,2024,PS4,-
 Trails into Reverie,4,2024,PS5,-
-13 Sentinels: Aegis Rim,4,2024,PS4,-
 The Sims 4,3,2024,PC,-
 Flower,2,2024,PS4,-
 Ni no Kuni II: Revenant Kingdom,3,2024,PS4,-
 Dragon Quest VIII: Journey of the Cursed King,3,2024,3DS,-
-The Legend of Zelda: Majora's Mask,3,2023,3DS,watched
+The Legend of Zelda: Majora's Mask,-,2023,3DS,watched
 Bravely Default II,3,2023,Switch,-
 Kirby and the Forgotten Land,4,2023,Switch,-
 Oceanhorn 2: Knights of the Lost Realm,2,2023,Switch,-
@@ -29,7 +29,7 @@ Fall Guys,3,2021,PC,-
 Pokemon Alpha Sapphire,4,2020,3DS,-
 Ghost of Tsushima,5,2020,PS5,-
 Danganronpa 2: Goodbye Despair,4,2020,PC,-
-Danganronpa: Trigger Happy Havoc,4,2020,PC,-
+Danganronpa: Trigger Happy Havoc,4+,2020,PC,-
 51 Worldwide Games,3,2020,Switch,-
 Super Smash Bros. Ultimate,3,2020,Switch,-
 Persona Q: Shadow of the Labyrinth,3,2020,3DS,-
@@ -41,14 +41,14 @@ Assassins Creed: Unity,2,2020,PS4,-
 Undertale,5,2020,Switch,-
 The Legend of Zelda: Ocarina of Time,3,2019,3DS,-
 Advance Wars: Dual Strike,3,2019,DS,-
-Catherine: Full Body,2,2019,PS4,watched
+Catherine: Full Body,-,2019,PS4,watched
 Trails in the Sky the 3rd,4,2019,PC,-
 Trails in the Sky SC,5,2019,PC,-
-Trails in the Sky FC,5,2019,PC,-
+Trails in the Sky FC,4+,2019,PC,-
 Trails of Cold Steel II,5,2019,PS4,-
 Final Fantasy XIV: Shadowbringers,5,2019,PS4,-
 The Legend of Zelda: Breath of the Wild,5,2019,Switch,-
-Tokyo Xanadu eX+,3,2019,PS4,-
+Tokyo Xanadu eX+,3+,2019,PS4,-
 Kingdom Hearts III,4,2019,PS4,-
 Persona 4 Golden,5,2018,Vita,-
 Final Fantasy III,2,2018,PC,-
@@ -57,11 +57,11 @@ Granblue Fantasy,-,2018,Mobile,impossible to score
 Persona 3 FES,4,2018,PS3,-
 Phoenix Wright: Ace Attorney - Spirit of Justice,4,2018,Mobile,-
 Grim Fandango,3,2018,PS4,-
-Shadow of the Colossus,3,2018,PS4,-
+Shadow of the Colossus,3+,2018,PS4,-
 Rime,3,2018,PS4,-
 Okami,5,2018,PS4,-
 Oceanhorn: Monster of Uncharted Seas,2,2018,PS4,-
-Detroit: Become Human,3,2018,PS4,watched
+Detroit: Become Human,-,2018,PS4,watched
 Drakengard 3,4,2018,PS3,-
 Final Fantasy IX,5,2018,PS4,-
 Final Fantasy XII,2,2017,PS4,-
@@ -73,7 +73,7 @@ Resogun,3,2017,PS4,-
 Final Fantasy Type-0,3,2017,PS4,-
 NieR: Automata,5,2017,PS4,-
 Final Fantasy XIV: Stormblood,4,2017,PS4,-
-South Park: The Fractured But Whole,3,2017,PC,watched
+South Park: The Fractured But Whole,-,2017,PC,watched
 Kingdom Hearts: Dream Drop Distance,4,2017,PS4,-
 Kingdom Hearts Coded,1,2017,PS4,watched the cutscene version
 Kingdom Hearts 358/2 Days,2,2017,PS4,watched the cutscene version
@@ -82,15 +82,15 @@ Final Fantasy XIV: Heavensward,4,2017,PS4,-
 Final Fantasy XIV: A Realm Reborn,3,2017,PS4,-
 Journey,3,2017,PS4,-
 Rise of the Tomb Raider,3,2017,PS4,-
-The Sims 3,3,2017,PC,-
+The Sims 3,3+,2017,PC,-
 Final Fantasy X,3,2017,PS4,-
 Final Fantasy IV,3,2017,PC,-
-Lightning Returns: Final Fantasy XIII,2,2017,PS3,-
+Lightning Returns: Final Fantasy XIII,2+,2017,PS3,-
 Final Fantasy XIII-2,2,2017,PS3,-
-J-Stars Victory VS,1,2017,PS4,-
+J-Stars Victory VS,1+,2017,PS4,-
 Final Fantasy XIII,3,2017,PS3,-
 The Last Guardian,3,2017,PS4,-
-Brothers: A Tale of Two Sons,5,2017,PS4,-
+Brothers: A Tale of Two Sons,4,2017,PS4,-
 Knack,2,2017,PS4,-
 Final Fantasy XV,4,2016,PS4,-
 Uncharted 4: A Thief's End,4,2016,PS4,-
@@ -99,10 +99,10 @@ Hero of the Kingdom 2,2,2016,PC,-
 Hero of the Kingdom,2,2015,PC,-
 Kingdom Hearts: Birth by Sleep,4,2015,PS3,-
 Democracy 3,3,2014,PC,-
-Hatoful Boyfriend: Holiday Star,4,2014,PC,watched
+Hatoful Boyfriend: Holiday Star,-,2014,PC,watched
 Hatoful Boyfriend,5,2014,PC,-
-South Park: The Stick of Truth,3,2014,PS3,watched
-Phoenix Wright: Ace Attorney - Dual Destinies,3,2014,3DS,watched
+South Park: The Stick of Truth,-,2014,PS3,watched
+Phoenix Wright: Ace Attorney - Dual Destinies,-,2014,3DS,watched
 Smite,4,2014,PC,-
 Kingdom Hearts: Chain of Memories,1,2014,PS3,gave up and watched the rest
 Battleblock Theater,3,2014,PC,-
@@ -110,16 +110,16 @@ Assassins Creed IV: Black Flag,4,2014,PS3,-
 Ni no Kuni: Wrath of the White Witch,4,2013,PS3,-
 Kingdom Hearts,3,2013,PS3,-
 Sly Cooper: Thieves in Time,3,2013,PS3,-
-The Last of Us,2,2013,PS3,watched
+The Last of Us,-,2013,PS3,watched
 Tomb Raider (2013),4,2013,PS3,-
 Mass Effect 3,3,2013,PS3,-
 PlayStation All-Stars Battle Royale,2,2012,PS3,-
 Hitman: Absolution,3,2012,PS3,-
 Assassins Creed III,3,2012,PS3,-
 Apollo Justice: Ace Attorney,3,2012,DS,-
-Uncharted: Drake's Fortune,2,2012,PS3,-
+Uncharted: Drake's Fortune,2+,2012,PS3,-
 Uncharted 2: Among Thieves,4,2012,PS3,-
-Jak & Daxter: The Precursor Legacy,2,2012,PS3,-
+Jak & Daxter: The Precursor Legacy,2+,2012,PS3,-
 Uncharted 3: Drake's Deception,4,2012,PS3,-
 Assassins Creed: Revelations,3,2012,PS3,-
 Assassins Creed,2,2012,PS3,-
@@ -130,12 +130,12 @@ Star Wars: The Force Unleashed,2,2012,PS3,-
 The Elder Scrolls IV: Oblivion,3,2012,PS3,-
 The Elder Scrolls V: Skyrim,5,2011,PS3,-
 Kingdom Hearts II,5,2011,PS3,-
-Ratchet & Clank: A Crack in Time,3,2011,PS3,-
+Ratchet & Clank: A Crack in Time,3+,2011,PS3,-
 Pokemon Silver,-,2011,GB,no memory of this
 Pokemon Blue,-,2011,GB,no memory of this
 Phoenix Wright: Ace Attorney - Trials and Tribulations,5,2011,DS,-
 Phoenix Wright: Ace Attorney - Justice for All,5,2011,DS,-
-Phoenix Wright: Ace Attorney,4,2011,DS,watched
+Phoenix Wright: Ace Attorney,-,2011,DS,watched
 Pokemon White,4,2010,DS,-
 Naruto Shippuden: Ultimate Ninja Storm 2,4,2010,PS3,-
 Final Fantasy VII,5,2010,PS3,-
@@ -143,8 +143,8 @@ Minecraft,4,2010,PC,-
 Star Wars: Battlefront II (PS2),4,-,PS2,-
 Naruto: Ultimate Ninja Storm,3,-,PS3,-
 Naruto Ultimate Ninja 3,2,-,PS2,-
-Ratchet & Clank: Tools of Destruction,3,-,PS3,-
-Ratchet & Clank: Size Matters,2,-,PS2,-
+Ratchet & Clank: Tools of Destruction,3+,-,PS3,-
+Ratchet & Clank: Size Matters,1+,-,PS2,-
 Spider-Man: Web of Shadows,1,-,PS2,more like web of lies
 Pokemon Diamond,3,-,DS,-
 Agent Hugo,1,-,PS2,-
@@ -155,9 +155,9 @@ One Piece: Grand Adventure,3,-,PS2,-
 Lego Star Wars: The Complete Saga,3,-,PS3,-
 Dragon Ball Z: Budokai Tenkaichi 3,4,-,PS2,-
 Dragon Ball Z: Budokai Tenkaichi 2,4,-,PS2,-
-Dragon Ball Z: Budokai Tenkaichi,1,-,PS2,-
-The Sims 2,3,-,PC,-
-The Sims,2,-,PS2,-
+Dragon Ball Z: Budokai Tenkaichi,2,-,PS2,-
+The Sims 2,3+,-,PC,-
+The Sims,2+,-,PS2,-
 Jak X,1,-,PS2,-
 Jak 3,4,-,PS2,-
 Ape Escape 3,5,-,PS2,-
@@ -173,7 +173,7 @@ Ultimate Spider-Man,3,-,PS2,-
 Crash Team Racing,2,-,PS1,-
 Ape Escape 2,4,-,PS2,-
 Ratchet & Clank 3: Up Your Arsenal,4,-,PS2,-
-Jak II: Renegade,3,-,PS2,-
+Jak II: Renegade,3+,-,PS2,-
 Duel Masters: Kaijudo Showdown,2,-,GBA,-
 Pokemon Emerald,4,-,GBA,-
 RuneScape,4,-,PC,-
