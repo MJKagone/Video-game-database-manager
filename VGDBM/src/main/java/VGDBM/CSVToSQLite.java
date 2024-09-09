@@ -28,7 +28,7 @@ class CSVToSQLite {
 
         while (scanner.hasNext()) {
             String line = scanner.next();
-            String[] parts = line.split(",");
+            String[] parts = line.split(";");
             String game = parts[0];
             String score = parts[1];
             String year = parts[2];
