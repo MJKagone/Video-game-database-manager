@@ -28,12 +28,19 @@ class CSVToSQLite {
 
         while (scanner.hasNext()) {
             String line = scanner.next();
-            String[] parts = line.split(";");
+            String[] parts = line.split(",");
             String game = parts[0];
             String score = parts[1];
             String year = parts[2];
             String platform = parts[3];
             String notes = parts[4];
+            try {
+                String notes2 = parts[5];
+                notes = notes + ", " + notes2;
+            } // Handles one "," character in the notes field
+            catch (ArrayIndexOutOfBoundsException e) {
+                
+            }
             Game newGame = new Game(game, score, year, platform, notes);
             if (!newGame.getGame().equals("Game")) {
                 try {

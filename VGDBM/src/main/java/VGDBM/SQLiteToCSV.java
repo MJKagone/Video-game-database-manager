@@ -59,7 +59,7 @@ class SQLiteToCSV {
                 
                 platform = rs.getString("Platform");
                 notes = rs.getString("Notes");
-                writer.print(game + ";" + score + ";" + year + ";" + platform + ";" + notes + "\n");
+                writer.print(game + "," + score + "," + year + "," + platform + "," + notes + "\n");
             }
         }
 
