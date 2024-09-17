@@ -32,16 +32,17 @@ class CSVToSQLite {
             String game = parts[0];
             String score = parts[1];
             String year = parts[2];
-            String platform = parts[3];
-            String notes = parts[4];
+            String genres = parts[3];
+            String platform = parts[4];
+            String notes = parts[5];
             try {
-                String notes2 = parts[5];
+                String notes2 = parts[6];
                 notes = notes + ", " + notes2;
             } // Handles one "," character in the notes field
             catch (ArrayIndexOutOfBoundsException e) {
                 
             }
-            Game newGame = new Game(game, score, year, platform, notes);
+            Game newGame = new Game(game, score, year, genres, platform, notes);
             if (!newGame.getGame().equals("Game")) {
                 try {
                     db.insertGame(newGame);
@@ -74,9 +75,10 @@ class CSVToSQLite {
             String game = parts[0];
             String score = parts[1];
             String year = parts[2];
-            String platform = parts[3];
-            String notes = parts[4];
-            Game newGame = new Game(game, score, year, platform, notes);
+            String genres = parts[3];
+            String platform = parts[4];
+            String notes = parts[5];
+            Game newGame = new Game(game, score, year, genres, platform, notes);
             if (!newGame.getGame().equals("Game")) {
                 try {
                     db.insertGame(newGame);

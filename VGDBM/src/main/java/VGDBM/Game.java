@@ -8,13 +8,15 @@ class Game {
     private String game;
     private String score;
     private String year;
+    private String genres;
     private String platform;
     private String notes;
 
-    public Game(String game, String score, String year, String platform, String notes) {
+    public Game(String game, String score, String year, String genres, String platform, String notes) {
         this.game = game;
         this.score = score;
         this.year = year;
+        this.genres = genres;
         this.platform = platform;
         this.notes = notes;
     }
@@ -29,6 +31,10 @@ class Game {
 
     public String getYear() {
         return year;
+    }
+
+    public String getGenres() {
+        return genres;
     }
 
     public String getPlatform() {
