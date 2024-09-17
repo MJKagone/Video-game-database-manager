@@ -46,7 +46,13 @@ class SQLiteToCSV {
 
                 if (rs.getString("Score") == null) {
                     score = "-";
-                } 
+                }
+                else if (rs.getString("Score").contains(".5")) {
+                    score = rs.getString("Score").substring(0, 1) + "+";
+                }
+                else if (rs.getString("Score").contains(".0")) {
+                    score = rs.getString("Score").substring(0, 1);
+                }
                 else {
                     score = rs.getString("Score");
                 }
