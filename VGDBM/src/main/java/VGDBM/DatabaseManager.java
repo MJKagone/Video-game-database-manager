@@ -53,7 +53,7 @@ class DatabaseManager {
      */
     public void initialize(Connection conn) throws SQLException {
 
-            PreparedStatement stmt = conn.prepareStatement("CREATE TABLE IF NOT EXISTS Games (Game TEXT PRIMARY KEY, Score DOUBLE, Year INTEGER, Genre TEXT, Platform TEXT, Notes TEXT);");
+            PreparedStatement stmt = conn.prepareStatement("CREATE TABLE IF NOT EXISTS Games (Game TEXT PRIMARY KEY, Score DOUBLE, Year INTEGER, Platform TEXT, Genre TEXT, Notes TEXT);");
             stmt.executeUpdate();
             stmt.close();
             System.out.println("Table Games created"); 
@@ -87,7 +87,7 @@ class DatabaseManager {
             yearInt = Integer.parseInt(game.getYear());
         }
 
-        PreparedStatement stmt = conn.prepareStatement("INSERT INTO Games (Game, Score, Year, Genre, Platform, Notes) VALUES (?, ?, ?, ?, ?, ?);");
+        PreparedStatement stmt = conn.prepareStatement("INSERT INTO Games (Game, Score, Year, Platform, Genre, Notes) VALUES (?, ?, ?, ?, ?, ?);");
         stmt.setString(1, game.getGame());
 
         if (scoreDouble != null) {
@@ -106,8 +106,8 @@ class DatabaseManager {
             stmt.setNull(3, java.sql.Types.INTEGER);
         }
 
-        stmt.setString(4, game.getGenres());
-        stmt.setString(5, game.getPlatform());
+        stmt.setString(4, game.getPlatform());
+        stmt.setString(5, game.getGenre());
         stmt.setString(6, game.getNotes());
         stmt.executeUpdate();
         stmt.close();
@@ -143,7 +143,7 @@ class DatabaseManager {
             yearInt = Integer.parseInt(updatedGame.getYear());
         }
 
-        PreparedStatement stmt = conn.prepareStatement("UPDATE Games SET Game = ?, Score = ?, Year = ?, Genre = ?, Platform = ?, Notes = ? WHERE Game = ?;");
+        PreparedStatement stmt = conn.prepareStatement("UPDATE Games SET Game = ?, Score = ?, Year = ?, Platform = ?, Genre = ?, Notes = ? WHERE Game = ?;");
         stmt.setString(1, updatedGame.getGame());
 
         if (scoreDouble != null) {
@@ -162,8 +162,8 @@ class DatabaseManager {
             stmt.setNull(3, java.sql.Types.INTEGER);
         }
 
-        stmt.setString(4, updatedGame.getGenres());
-        stmt.setString(5, updatedGame.getPlatform());
+        stmt.setString(4, updatedGame.getPlatform());
+        stmt.setString(5, updatedGame.getGenre());
         stmt.setString(6, updatedGame.getNotes());
         stmt.setString(7, game);
         stmt.executeUpdate();
@@ -224,7 +224,7 @@ class DatabaseManager {
         Game fetchedGame = null;
 
         if (rs.next()) {
-            fetchedGame = new Game(rs.getString("Game"), rs.getString("Score"), rs.getString("Year"), rs.getString("Genre"), rs.getString("Platform"), rs.getString("Notes"));
+            fetchedGame = new Game(rs.getString("Game"), rs.getString("Score"), rs.getString("Year"), rs.getString("Platform"), rs.getString("Genre"), rs.getString("Notes"));
         }
 
         stmt.close();

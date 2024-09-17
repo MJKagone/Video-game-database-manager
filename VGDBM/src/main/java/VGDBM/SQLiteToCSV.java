@@ -38,7 +38,7 @@ class SQLiteToCSV {
             String platform;
             String notes;
             ResultSet rs = db.fetchAllByDate();
-            writer.print("Game,Score,Year,Platform,Notes\n");
+            writer.print("Game,Score,Year,Platform,Genre(s),Notes\n");
 
             while (rs.next()) {
                 
@@ -58,10 +58,10 @@ class SQLiteToCSV {
                     year = rs.getString("Year");
                 }
                 
-                genres = rs.getString("Genre(s)");
+                genres = rs.getString("Genre");
                 platform = rs.getString("Platform");
                 notes = rs.getString("Notes");
-                writer.print(game + "," + score + "," + year + "," + genres + "," + platform + "," + notes + "\n");
+                writer.print(game + "," + score + "," + year + "," + platform + "," + genres + "," + notes + "\n");
             }
         }
 

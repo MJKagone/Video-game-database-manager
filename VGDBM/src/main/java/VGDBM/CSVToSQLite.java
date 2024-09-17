@@ -75,10 +75,10 @@ class CSVToSQLite {
             String game = parts[0];
             String score = parts[1];
             String year = parts[2];
-            String genres = parts[3];
-            String platform = parts[4];
+            String platform = parts[3];
+            String genres = parts[4];
             String notes = parts[5];
-            Game newGame = new Game(game, score, year, genres, platform, notes);
+            Game newGame = new Game(game, score, year, platform, genres, notes);
             if (!newGame.getGame().equals("Game")) {
                 try {
                     db.insertGame(newGame);

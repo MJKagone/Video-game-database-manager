@@ -57,16 +57,16 @@ public class Main {
                             System.out.println("Enter the year");
                             String year = scanner.nextLine();
 
-                            System.out.println("Enter the genre(s)");
-                            String genres = scanner.nextLine();
-
                             System.out.println("Enter the platform");
                             String platform = scanner.nextLine();
+
+                            System.out.println("Enter the genre(s)");
+                            String genre = scanner.nextLine();
     
                             System.out.println("Enter the notes");
                             String newnotes = scanner.nextLine();
                         
-                            db.insertGame(new Game(game, score, year, genres, platform, newnotes));
+                            db.insertGame(new Game(game, score, year, platform, genre, newnotes));
                         }
 
                         break;
@@ -116,26 +116,26 @@ public class Main {
                             newYear = oldYear;
                         }
 
-                        System.out.println("Enter the new genre(s). Press enter to leave unchanged.");
-                        String newGenres = scanner.nextLine();
-                        if (newGenres.trim().equals("")) {
-                            newGenres = db.fetchGame(gameName).getGenres();
-                        }
-
                         System.out.println("Enter the new platform. Press enter to leave unchanged.");
                         String oldPlatform = db.fetchGame(gameName).getPlatform();
                         String newPlatform = scanner.nextLine();
                         if (newPlatform.trim().equals("")) {
                             newPlatform = oldPlatform;
                         }
-                    
+
+                        System.out.println("Enter the new genre(s). Press enter to leave unchanged.");
+                        String newGenre = scanner.nextLine();
+                        if (newGenre.trim().equals("")) {
+                            newGenre = db.fetchGame(gameName).getGenre();
+                        }
+
                         System.out.println("Enter the new notes. Press enter to leave unchanged.");
                         String newNotes = scanner.nextLine();
                         if (newNotes.trim().equals("")) {
                             newNotes = db.fetchGame(gameName).getNotes();
                         }
                     
-                        db.updateGame(gameName, new Game(newGame, newScore, newYear, newGenres, newPlatform, newNotes));
+                        db.updateGame(gameName, new Game(newGame, newScore, newYear, newPlatform, newGenre, newNotes));
 
                     } 
 
