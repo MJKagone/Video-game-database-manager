@@ -8,16 +8,18 @@ class Game {
     private String game;
     private String score;
     private String year;
-    private String genres;
     private String platform;
+    private String developer;
+    private String genre;
     private String notes;
 
-    public Game(String game, String score, String year, String platform, String genre, String notes) {
+    public Game(String game, String score, String year, String platform, String developer, String genre, String notes) {
         this.game = game;
         this.score = score;
         this.year = year;
         this.platform = platform;
-        this.genres = genre;
+        this.developer = developer;
+        this.genre = genre;
         this.notes = notes;
     }
 
@@ -33,12 +35,16 @@ class Game {
         return year;
     }
 
-    public String getGenre() {
-        return genres;
-    }
-
     public String getPlatform() {
         return platform;
+    }
+
+    public String getDeveloper() {
+        return developer;
+    }
+
+    public String getGenre() {
+        return genre;
     }
 
     public String getNotes() {

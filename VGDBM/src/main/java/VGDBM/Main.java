@@ -60,13 +60,16 @@ public class Main {
                             System.out.println("Enter the platform");
                             String platform = scanner.nextLine();
 
+                            System.out.println("Enter the developer");
+                            String developer = scanner.nextLine();
+
                             System.out.println("Enter the genre(s)");
                             String genre = scanner.nextLine();
     
                             System.out.println("Enter the notes");
                             String newnotes = scanner.nextLine();
                         
-                            db.insertGame(new Game(game, score, year, platform, genre, newnotes));
+                            db.insertGame(new Game(game, score, year, platform, developer, genre, newnotes));
                         }
 
                         break;
@@ -123,6 +126,12 @@ public class Main {
                             newPlatform = oldPlatform;
                         }
 
+                        System.out.println("Enter the new developer. Press enter to leave unchanged.");
+                        String newDeveloper = scanner.nextLine();
+                        if (newDeveloper.trim().equals("")) {
+                            newDeveloper = db.fetchGame(gameName).getDeveloper();
+                        }
+
                         System.out.println("Enter the new genre(s). Press enter to leave unchanged.");
                         String newGenre = scanner.nextLine();
                         if (newGenre.trim().equals("")) {
@@ -135,7 +144,7 @@ public class Main {
                             newNotes = db.fetchGame(gameName).getNotes();
                         }
                     
-                        db.updateGame(gameName, new Game(newGame, newScore, newYear, newPlatform, newGenre, newNotes));
+                        db.updateGame(gameName, new Game(newGame, newScore, newYear, newPlatform, newDeveloper, newGenre, newNotes));
 
                     } 
 
